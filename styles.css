@@ -143,9 +143,10 @@ body {
     grid-area: content;
     display: grid;
     grid-template-columns: repeat(2, minmax(250px, 2fr)) minmax(200px, 1.5fr); 
+    grid-template-rows: auto auto 1fr;
     padding: 2rem;
     gap: 1.5rem;
-    grid-template-rows: auto 1fr;
+    
 }
 
 .projects {
@@ -218,6 +219,16 @@ hr {
     padding: 1.5rem;
     border-radius: 10px;
     grid-column: 3 / 4;
-    grid-row: 2 / 4;
+    grid-row: 3 / 4;
     align-self: start;
+}
+
+.trending > div {
+    display: flex;
+    align-items: center;
+}
+
+.trending-names {
+    display: flex;
+    flex-direction: column;    
 }
