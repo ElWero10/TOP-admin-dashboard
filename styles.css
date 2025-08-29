@@ -2,4 +2,35 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar content";
+    height: 100vh;
+}
+
+div {
+    height: 100%;
+}
+
+.sidebar {
+    background-color: blue;
+    grid-area: sidebar;
+}
+
+.header {
+    background-color: red;
+    grid-area: header;
+    height: 80px;
+}
+
+.content {
+    background-color: yellow;
+    grid-area: content;
 }
