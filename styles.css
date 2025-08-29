@@ -28,6 +28,11 @@ body {
     padding-left: 1.5rem;
 }
 
+.sidebar > div > img {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
 .sidebar > *:not(.dashboard) {
     padding-left: 2rem;
 }
@@ -134,11 +139,39 @@ body {
 }
 
 .content {
-    background-color: yellow;
+    background-color: hsl(0, 0%, 90%);
     grid-area: content;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 2fr)) 1fr;
+    grid-template-rows: repeat(autofit, minmax(300px, 1fr));
+    padding: 2rem;
 }
 
-img {
-    height: 40px;
-    width: 40px;
+.projects {
+    display: grid;
+    gap: 1rem;
+    
+}
+
+.projects > div {
+    background-color: white;
+    min-height: 12vh;
+    min-width: 18vw;
+    border-left: 10px solid orange;
+    border-radius: 10px;
+    display: grid;
+    padding: 2rem 1rem 0 2rem;
+    font-size: 1.2rem;
+}
+
+.card-images > img {
+    height: 2rem;
+    width: 2rem;
+
+}
+
+.card-images {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    justify-content: end;
 }
