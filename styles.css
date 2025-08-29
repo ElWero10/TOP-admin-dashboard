@@ -142,15 +142,24 @@ body {
     background-color: hsl(0, 0%, 90%);
     grid-area: content;
     display: grid;
-    grid-template-columns: repeat(2, minmax(250px, 2fr)) 1fr;
-    grid-template-rows: repeat(autofit, minmax(300px, 1fr));
     padding: 2rem;
+    grid-template-rows: auto 1fr 1fr;
 }
 
 .projects {
     display: grid;
     gap: 1rem;
-    
+    grid-template-columns: repeat(2, minmax(350px, 2fr)) 1fr;
+}
+
+div.split {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr) 1fr;
+    font-size: 1.5rem;
+}
+
+.announcements {
+    grid-column: 3 / 4;
 }
 
 .projects > div {
@@ -162,16 +171,22 @@ body {
     display: grid;
     padding: 2rem 1rem 0 2rem;
     font-size: 1.2rem;
+    gap: 1rem;
 }
 
 .card-images > img {
-    height: 2rem;
-    width: 2rem;
-
+    max-width: 80%;
+    height: auto;
 }
 
 .card-images {
     display: grid;
     grid-template-columns: repeat(3, 60px);
     justify-content: end;
+}
+
+.announce-card {
+    background-color: white;
+    border-radius: 20px;
+    grid-column: 3 / 4;
 }
