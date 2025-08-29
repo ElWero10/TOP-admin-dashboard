@@ -7,25 +7,46 @@
 
 body {
     display: grid;
-    grid-template-columns: 2fr 5fr;
+    grid-template-columns: minmax(300px, 1fr) 5fr;
     grid-template-rows: auto 1fr;
     grid-template-areas: 
     "sidebar header"
     "sidebar content";
-    height: 100vh;
-}
-
-div {
-    height: 100%;
+    height: 99vh;
 }
 
 .sidebar {
-    background-color: blue;
     grid-area: sidebar;
+    background-color: hsl(211, 78%, 60%);
+    color: #000;
+}
+
+.sidebar > * {
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    padding-left: 1.5rem;
+}
+
+.sidebar > *:not(.dashboard) {
+    padding-left: 2rem;
+}
+
+.community {
+    padding-bottom: 3rem;
+}
+
+.dashboard {
+    padding-bottom: 2rem;
+}
+
+.dashboard > img {
+    height: 3.5rem;
+    width: 3.5rem;
 }
 
 .header {
-    background-color: red;
+    background-color: white;
     grid-area: header;
     height: 80px;
 }
@@ -33,4 +54,9 @@ div {
 .content {
     background-color: yellow;
     grid-area: content;
+}
+
+img {
+    height: 40px;
+    width: 40px;
 }
