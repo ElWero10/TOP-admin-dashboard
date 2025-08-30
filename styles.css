@@ -220,15 +220,20 @@ hr {
     border-radius: 10px;
     grid-column: 3 / 4;
     grid-row: 3 / 4;
-    align-self: start;
 }
 
 .trending > div {
     display: flex;
-    align-items: center;
+    margin-bottom: .5rem;
+    
 }
 
 .trending-names {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
+    line-height: 0;
+    justify-content: center; 
+    overflow: wrap;
+    
 }
+
